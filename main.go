@@ -1,15 +1,18 @@
 package main
 
 import (
-	"errors"
+	"github.com/pkg/errors"
 
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
+	"github.com/rs/zerolog/pkgerrors"
 )
 
 func main() {
 
 	// zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+	zerolog.ErrorStackMarshaler = pkgerrors.MarshalStack
+
 	zerolog.SetGlobalLevel(zerolog.InfoLevel)
 	log.Print("test")
 	log.Info().Str("category", "search").Int("Duration time", 80).Msg("searching for a thing")
