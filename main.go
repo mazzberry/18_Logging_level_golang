@@ -8,6 +8,16 @@ import (
 	"github.com/rs/zerolog/pkgerrors"
 )
 
+//-- log level
+// trace
+// debug
+// info
+// warn
+// error
+// fatal(critical)
+// panic
+
+
 func main() {
 
 	// zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
@@ -48,10 +58,3 @@ func func3() error{
 	return nil
 }
 
-// trace
-// debug
-// info
-// warn
-// error
-// fatal(critical)
-// panic
